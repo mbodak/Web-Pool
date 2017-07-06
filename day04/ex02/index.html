@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex02</title>
+
+    <style>
+        body {
+            background: black;
+        }
+        .text {
+            color: white;
+        }
+        .log {
+            position: relative;
+            left: 1.6%;
+        }
+        .pass {
+            position: relative;
+            left: 0.65%;
+        }
+        .pass1 {
+            position: relative;
+            left: 0.4%;
+        }
+        .ok {
+            position: relative;
+            left: 7.6%;
+            width: 2%;
+            font-size: 100%;
+        }
+        #box {
+            position: relative;
+            top: 5%;
+            left: 5%;
+        }
+    </style>
+</head><body>
+<div id="box">
+    <form action="modif.php" method="post">
+        <p class="text">Username: <input class="log" type="text" name="login"/></p>
+        <p class="text">Old password: <input class="pass" type="password" name="oldpw"/></p>
+        <p class="text">New password: <input class="pass1" type="password" name="newpw"/></p>
+        <p> <input class="ok" type="submit" name="submit" value="OK"/></p>
+    </form>
+</div>
+</body></html>
