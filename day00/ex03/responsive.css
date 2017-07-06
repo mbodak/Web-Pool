@@ -1,0 +1,78 @@
+body {
+    background: ghostwhite;
+    text-align: center;
+}
+img {
+    width: 40%;
+    height: 20%;
+    position: relative;
+    left: 1%;
+}
+table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 2px 2px;
+    position: relative;
+}
+caption {
+    text-align: center;
+    position: relative;
+    font-size: 1vw;
+}
+td:hover {background-color: darkgray}
+tr, td {
+    border: 2px solid white;
+    text-align: center;
+    font-size: 2.2vmin;
+    font-weight: bold;
+    empty-cells: hide;
+    position: relative;
+}
+td {
+    width: 5.1%;
+}
+.nonmetal {
+    background: greenyellow;
+}
+.transition_metals {
+    background: orange;
+    margin: 0;
+}
+.alkali_metals {
+    background: orangered;
+}
+.alkaline-earth_metals {
+    background: yellow;
+}
+.inert_gases {
+    background: dodgerblue;
+}
+.semimetals {
+    background: limegreen;
+}
+.semiconductors {
+    background: olivedrab;
+}
+.halogens {
+    background: aqua;
+}
+.lanthanides {
+    background: deeppink;
+}
+.actinides {
+    background: mediumorchid;
+}
+.num {
+    text-align: left;
+    font-size: 1.2vmin;
+    margin: 0;
+}
+.weight {
+    font-size: 1.2vmin;
+    text-align: right;
+    margin: 0;
+}
+.name {
+    margin-top: 0.65vmin;
+    font-size: 2.2vmin;
+}

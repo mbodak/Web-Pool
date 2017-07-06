@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex00</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="shape"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var height = 200;
+            var width = 200;
+            var click = 0;
+            var colors = ["red", "green", "blue"];
+            var shape = document
+                .getElementById('shape')
+                .addEventListener("click", function() {
+                    click++;
+                    if (click > 2)
+                        click = 0;
+                    this.style.backgroundColor = colors[click];
+                    height = height + 10;
+                    width = width + 10;
+                    this.style.height = height + 'px';
+                    this.style.width = width + 'px';
+
+                    if (height == 420 && width == 420) {
+                        height = 190;
+                        width = 190;
+                    }
+                });
+            document
+                .getElementById('shape')
+                .addEventListener("mouseleave", function() {
+                    if (height > 200 && width > 200)
+                    {
+                        height = height - 5;
+                        width = width - 5;
+                        this.style.height = height + 'px';
+                        this.style.width = width + 'px ';
+                    }
+                    click--;
+                    if (click == -1)
+                        click = 2;
+                    this.style.backgroundColor = colors[click];
+                });
+        });
+    </script>
+</body>
+</html>

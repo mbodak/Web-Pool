@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balloon</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <style>
+        #shape {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div id="shape"></div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        var click = 0;
+        var colors = ['red', 'green', 'blue'];
+        var shape = $("#shape");
+
+        shape.bind('click', function () {
+            var width = shape.css("width");
+            var height = shape.css("height");
+
+            click++;
+            shape.css( { "width": parseInt(width) + 10 + 'px', "height": parseInt(height) + 10 + 'px' } );
+
+            if (parseInt(shape.css("width")) > 420) {
+                shape.css( { "width": 200 + 'px', "height": 200 + 'px' } );
+            }
+            if (click > 2) { click = 0; }
+            shape.css("background-color", colors[click]);
+        });
+
+        shape.bind('mouseleave', function () {
+            var width = shape.css("width");
+            var height = shape.css("height");
+
+            click--;
+            if (parseInt(shape.css('width')) > 200) {
+                shape.css( { 'width': parseInt(width) - 5 + 'px', 'height': parseInt(height) - 5 + 'px' } );
+            }
+            if (click < 0) { click = 2; }
+            shape.css('background-color', colors[click]);
+        });
+    });
+</script>
+
+</html>

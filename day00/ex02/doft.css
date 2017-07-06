@@ -1,0 +1,181 @@
+body {
+    background: #505050;
+}
+.block1 {
+    background: #919191;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    box-shadow: 9px 9px 3px rgba(0,0,0,0.3);
+    border-radius: 10px 10px;
+    position: relative;
+}
+.day_of_the_42 {
+    height: 90px;
+    padding: 3px;
+}
+.reload {
+    height: 20px;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}
+.close {
+    position: absolute;
+    top: 75px;
+    right: 5px;
+}
+.loupe {
+    height: 110px;
+    position: absolute;
+    top: 3px;
+    right: 25px;
+}
+.block2 {
+    height: 100%;
+    width: 78%;
+    margin: auto;
+    z-index: 1;
+
+}
+.line1 {
+    display: inline-block;
+    background: #919191;
+    float: left;
+    box-shadow: 9px 9px 3px rgba(0,0,0,0.3);
+    border-radius: 10px 10px;
+    height: 600px;
+    width: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+.arrow {
+    height: 15%;
+    width: 50%;
+    position: relative;
+    top: 3%;
+    left: 25%;
+}
+.main {
+    height: 15%;
+    width: 45%;
+    position: relative;
+    top: 20%;
+    left: -25%;
+}
+.oeil {
+    height: 15%;
+    width: 55%;
+    position: relative;
+    top: 22%;
+    left: 20%;
+    border: 5px solid red;
+}
+.outil {
+    height: 15%;
+    width: 45%;
+    position:relative;
+    top: 25%;
+    left: 30%;
+}
+.chat-icon {
+    height: 15%;
+    width: 45%;
+    position: relative;
+    top: 45%;
+    left: -20%;
+}
+.line2 {
+    display: inline-block;
+    width: 75%;
+    margin-top: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.cluster {
+    border: 9px solid darkgray;
+    box-shadow: 9px 9px 3px rgba(0,0,0,0.4);
+    border-radius: 10px 10px;
+    width: 100%;
+    height: 100%;
+}
+.line3 {
+    display: inline-block;
+    background: #919191;
+    float: right;
+    box-shadow: 9px 9px 3px rgba(0,0,0,0.3);
+    border-radius: 10px 10px;
+    height: 600px;
+    width: 10%;
+    margin-top: 15px;
+    position: relative;
+}
+.book {
+    height: 25%;
+    width: 62%;
+    position: relative;
+    top: 5%;
+    margin-top: 8%;
+    right: -20%;
+}
+.towel {
+    height: 15%;
+    width: 50%;
+    position: relative;
+    top: 55%;
+    right: -25%;
+}
+.bricks {
+    position: relative;
+    height: 20%;
+    width: 90%;
+    left: 5%;
+    top: 1%;
+    background: url(resources/brick.jpg), repeat;
+}
+.block3 {
+    text-align: left;
+    height: 200px;
+    width: 570px;
+    margin: auto;
+    background: #88FF89;
+    box-shadow: 9px 9px 3px rgba(0,0,0,0.3);
+    border-radius: 10px 10px;
+    position: absolute;
+    float: left;
+    top: 65%;
+    left: 7%;
+    z-index: 2;
+}
+.text {
+    font-size: 18px;
+    margin-left: 2%;
+    margin-top: -2%;
+    font-family: sans-serif;
+}
+.word {
+    text-shadow: 5px 5px 0.2em red;
+}
+.li2 {
+    display: block;
+    height: 195px;
+    width: 267px;
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 67%;
+}
+.li1 {
+    display: block;
+    height: 291px;
+    width: 168px;
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 40%;
+}
+.form {
+    margin-left: 2%;
+    margin-top: -2%;
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <title>ex03</title>
+    <style>
+        body {
+            background: floralwhite;
+        }
+        div {
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .val {
+            height: 80px;
+            width: 150px;
+            text-align: center;
+            font-size: 150%;
+        }
+        .op {
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            font-size: 150%;
+        }
+        /*стиль кнопки*/
+        .butt {
+            background-color:#ededed;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            color:#777777;
+            font-size:15px;
+            font-weight:bold;
+            padding:8px 27px;
+            text-decoration:none;
+            margin-top: 10px;
+            cursor: pointer
+        }
+        /*кнопка при наведении*/
+        .butt:hover {background-color:#dfdfdf}
+        /*активное состояние кнопки*/
+        .butt:active{position:relative;top:1px}
+        /*Стиль элемента при наведении*/
+        .val:hover {background-color: #ededed}
+    </style>
+</head>
+<body>
+    <<div id='calc'>
+        <input class="val" id="v1" type="text" name="val1" />
+        <select class="op" id="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input class="val" id="v2" type="text" name="val2" />
+        <input class="butt" type="submit" name="submit" value="Try me!">
+    </div>
+</body>
+
+    <script>
+
+        $(document).ready(function() {
+            var submit = $("input[type='submit']");
+
+         submit.bind('click', function () {
+            var v1;
+            var v2;
+            var op;
+
+            v1 = $("input[name='val1']").val();
+            v2 = $("input[name='val2']").val();
+            op = $('select').val();
+
+            var is_int = /^[-+]?\d+$/;
+
+            if (!is_int.test(v1) || !is_int.test(v2) || +v1 < 0 || +v2 < 0) {
+                console.log("Error :(");
+                alert("Error :(");
+            }
+            else if ((op === '/' && +v2 === 0) || (op === '%' && +v2 === 0)) {
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
+            }
+            else {
+                console.log(eval(v1 + " " + op + " " + v2));
+                alert(eval(v1 + " " + op + " " + v2));
+            }
+        });
+
+         setInterval(function() {
+             alert("Please, use me...")
+         }, 30000);
+    });
+    </script>
+</html>

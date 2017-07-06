@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex01</title>
+    <style>
+        body {
+            background: floralwhite;
+        }
+        div {
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .val {
+            height: 80px;
+            width: 150px;
+            text-align: center;
+            font-size: 150%;
+        }
+        .op {
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            font-size: 150%;
+        }
+        /*стиль кнопки*/
+        .butt {
+            background-color:#ededed;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            color:#777777;
+            font-size:15px;
+            font-weight:bold;
+            padding:8px 27px;
+            text-decoration:none;
+            margin-top: 10px;
+            cursor: pointer
+        }
+        /*кнопка при наведении*/
+        .butt:hover {background-color:#dfdfdf}
+        /*активное состояние кнопки*/
+        .butt:active{position:relative;top:1px}
+        /*Стиль элемента при наведении*/
+        .val:hover {background-color: #ededed}
+    </style>
+</head>
+<body>
+    <div id='calc'>
+        <input class="val" id="v1" type="text" name="val1" />
+        <select class="op" id="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input class="val" id="v2" type="text" name="val2" />
+        <button class="butt" onclick="getResult()">Try me!</button>
+    </div>
+
+    <script type="text/javascript">
+
+        setInterval(function() {
+            alert("Please, use me...")
+        }, 30000);
+
+        function getResult()
+        {
+            var v1 = document.getElementById('v1').value;
+            var v2 = document.getElementById('v2').value;
+            var op = document.getElementById('op').value;
+            var res;
+            var is_int = /^[-+]?\d+$/;
+
+            if (!is_int.test(v1) || !is_int.test(v2) || +v1 < 0 || +v2 < 0)
+                    res = "Error :(’.";
+            else if ((op === '/' && +v2 === 0) || (op === '%' && +v2 === 0))
+                res = "It’s over 9000!";
+            else {
+                if (op === '+')
+                    res = +v1 + +v2;
+                else if (op === '-')
+                    res = +v1 - +v2;
+                else if (op === '*')
+                    res = +v1 * +v2;
+                else if (op === '/')
+                    res = +v1 / +v2;
+                else if (op === '%')
+                    res = +v1 % +v2;
+            }
+            console.log(res);
+            alert(res);
+        }
+    </script>
+</body>
+</html>
